@@ -64,22 +64,22 @@ void printCard(int cardnum) {
 			else if (quo ==3) printf("SPD10");
 			break;
 		case 10:
-			if (quo==0) printf("HRT J");
-			else if (quo==1) printf("DIA J");
-			else if (quo ==2) printf("CLV J");
-			else if (quo ==3) printf("SPD J");
+			if (quo==0) printf("HRT Jack");
+			else if (quo==1) printf("DIAJack");
+			else if (quo ==2) printf("CLVJack");
+			else if (quo ==3) printf("SPDJack");
 			break;
 		case 11:
-			if (quo==0) printf("HRT Q");
-			else if (quo==1) printf("DIA Q");
-			else if (quo ==2) printf("CLV Q");
-			else if (quo ==3) printf("SPD Q");
+			if (quo==0) printf("HRTQueen");
+			else if (quo==1) printf("DIAQueen");
+			else if (quo ==2) printf("CLVQueen");
+			else if (quo ==3) printf("SPDQueen");
 			break;
 		case 12:
-			if (quo==0) printf("HRT K");
-			else if (quo==1) printf("DIA K");
-			else if (quo ==2) printf("CLV K");
-			else if (quo ==3) printf("SPD K");
+			if (quo==0) printf("HRTKing");
+			else if (quo==1) printf("DIAKing");
+			else if (quo ==2) printf("CLVKing");
+			else if (quo ==3) printf("SPDKing");
 			break;
 	}
 }

@@ -31,6 +31,8 @@ int pullnum=52;
 //player info
 int dollar[N_MAX_USER];						//dollars that each player has
 int n_user=0;								//number of users
+int userDollar[N_MAX_USER];
+
 
 int round=1;
 //play yard information
@@ -49,5 +51,9 @@ int betDollar(void);
 void offerCards(void);
 void printCardInitialStatus(void);
 int getAction(void);
-void printUserCardStatus(int user, int cardcnt);
+void printUserCardStatus(int user, int cardcnt );
+int calcStepResult(void);
+int checkResult(void);
+int checkWinner(void); 
 
+//getAction과 calcstepresult int 매개변수로 수정  

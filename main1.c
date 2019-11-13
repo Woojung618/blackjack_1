@@ -48,7 +48,6 @@ int mixCardTray(void) {
 		CardTray[rn]=temp;
 		
 	}
-	for (i=0;i<num;i++) printf("%d ",CardTray[i]);
 	
 }
 //get one card from the tray
@@ -75,7 +74,7 @@ int configUser(void) {
 		if (n_user <1) printf("invalid input players (%d)\n",n_user);
 	}while ( n_user>5 || n_user<1);
 	
-	n_user-=1;
+
 }
 
 
@@ -92,12 +91,12 @@ int betDollar(void) {
 	//printf("   -> your betting (total:$50) : %d\n",dollar[0]);
 	int i;
 	
-	for (i=1;i<=n_user;i++){
+	for (i=1;i<n_user;i++){
 		int random=rand();
 		dollar[i]=random%50+1;
 		printf("   -> player%d bets $%d (out of $50)\n",i,dollar[i]);
 	}
-	
+	printf("\n");	
 }
 
 
@@ -123,13 +122,13 @@ void offerCards(void) {
 void printCardInitialStatus(void) {
 	int p;
 	printf(" --- server		: ");//server는 cardhold[][]에서 n_user번째  
-	printCard(cardhold[n_user][0]); printf(" ");printCard(cardhold[n_user][1]); 
+	 printf("X ");printCard(cardhold[n_user][1]); 
 	printf("\n");
 	printf("   -> you		: "); printCard(cardhold[0][0]); printf(" ");
 	printCard(cardhold[0][1]);
 	printf("\n");
 	for (p=1;p<n_user;p++){
-		printf("   -> player %d 		:",p); 
+		printf("   -> player %d 		: ",p); 
 		printCard(cardhold[p][0]); printf(" ");printCard(cardhold[p][1]);
 		printf("\n");
 	}
