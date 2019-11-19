@@ -22,6 +22,7 @@
 
 
 
+
 //card tray object //cardhold에 넣어놓고 cardtray에 임의로 섞어서 넣음.
 //그리고 tray로부터 꺼 냄 
 int CardTray[N_CARDSET*N_CARD]; //52장 4*13 = 4*N_MAX_CARDNUM
@@ -33,8 +34,9 @@ int dollar[N_MAX_USER];						//dollars that each player has
 int n_user=0;								//number of users
 int userDollar[N_MAX_USER];
 
+int roundNum=0;
+int flag=0; //1이면 블랙잭 또는 패배. 턴 끝남.  
 
-int round=1;
 //play yard information
 int cardhold[N_MAX_USER+1][N_MAX_CARDHOLD];	//cards that currently the players hold
 int cardSum[N_MAX_USER];					//sum of the cards. player별 
@@ -50,10 +52,10 @@ int configUser(void);
 int betDollar(void);
 void offerCards(void);
 void printCardInitialStatus(void);
-int getAction(void);
-void printUserCardStatus(int user, int cardcnt );
-int calcStepResult(void);
+int getAction(int user);
+void printUserCardStatus(int user);
+int calcStepResult(int user);
 int checkResult(void);
 int checkWinner(void); 
 
-//getAction과 calcstepresult int 매개변수로 수정  
+void printWhoTurn(int user); 

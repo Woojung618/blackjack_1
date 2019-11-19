@@ -4,10 +4,10 @@ void printCard(int cardnum) {
 	quo=cardnum/13; rest = cardnum%13;
 	switch (rest){
 		case 0:
-			if (quo==0) printf("HRT A");
-			else if (quo==1) printf("DIA A");
-			else if (quo ==2) printf("CLV A");
-			else if (quo ==3) printf("SPD A");
+			if (quo==0) printf("HRTA");
+			else if (quo==1) printf("DIAA");
+			else if (quo ==2) printf("CLVA");
+			else if (quo ==3) printf("SPDA");
 			break;
 		case 1:
 			if (quo==0) printf("HRT2");
