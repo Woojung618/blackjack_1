@@ -354,6 +354,10 @@ int checkResult() {
 			u_dollar[0] += dollar[0]; //돈계산
 			printf(" win (sum:%d) --> $%d\n", calcStepResult(0), u_dollar[0]);
 		}
+		else { //둘다 21보다 작고 player<dealer일때 lose 
+			u_dollar[0]-=dollar[0];
+			printf(" lose (sum:%d)  -> $%d\n",calcStepResult(0),u_dollar[0]);
+		}
 		int i;
 		for (i = 1;i < n_user;i++) {
 			printf(" -> %d player's result : ", i);
@@ -367,6 +371,10 @@ int checkResult() {
 			else if (calcStepResult(i) < 21 && calcStepResult(i) >= calcStepResult(n_user)) {
 				u_dollar[i] += dollar[i];
 				printf(" win (sum:%d) --> $%d\n", calcStepResult(i), u_dollar[i]);
+			}
+			else { //둘다 21보다 작고 player<dealer일때 lose 
+			u_dollar[i]-=dollar[i];
+			printf(" lose (sum:%d)  -> $%d\n",calcStepResult(i),u_dollar[i]);
 			}
 		}
 	}

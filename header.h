@@ -21,7 +21,7 @@
 // (-1 is returned if keyboard input was not integer)
 
 
-
+ 
 
 //card tray object //cardhold에 넣어놓고 cardtray에 임의로 섞어서 넣음.
 //그리고 tray로부터 꺼 냄 

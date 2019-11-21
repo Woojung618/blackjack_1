@@ -1,5 +1,5 @@
 //print the card information (e.g. DiaA)
-void printCard(int cardnum) {
+void printCard(int cardnum) { 
 	int quo = 0; int rest = 0;
 	quo = cardnum / 13; rest = cardnum % 13;
 	switch (rest) {
